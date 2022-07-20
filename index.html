@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Acertando o Copa Super Mario World</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="imagens/copa.png">
+
+	<link rel="stylesheet" type="text/css" href="./css/estilo.css">
+</head>
+
+<body>
+
+	<main class="home d-flex flex-column justify-content-between">
+
+		<div class="d-flex justify-content-center">
+			<div class="title-game d-flex align-items-center">	
+				<div class="title">
+					<p><b class="aqua">Jogo</b> <b class="crimson">do</b></p>
+					<p><b class="gold">Acerte o</b> <b class="lime">Copa</b></p>
+				</div>
+
+				<div class="copa">
+					<img class="img-fluid" src="imagens/copa.png">
+				</div>
+			</div>
+		</div>
+	
+		<div class="d-flex justify-content-center">
+			<div class="select-level">	
+				<select class="select" id="nivel_jogo">
+					<option class="lime" value="1">Fácil</option>
+					<option class="gold" value="2">Normal</option>
+					<option class="crimson" value="3">Difícil</option>
+				</select>
+
+				<div class="start">	
+					<img class="img-fluid" src="imagens/iniciar.png" onclick="iniciarJogo();">
+				</div>			
+			</div>
+		</div>
+
+		<div class="figures d-flex justify-content-between align-items-center">
+			<img id="figure-1" class="figure-animation img-fluid" src="imagens/mario1.png">
+			<img id="figure-2" class="figure-animation-center img-fluid" src="imagens/mario2.png">
+			<img id="figure-3" class="figure-animation img-fluid" src="imagens/cogumelo.png">
+		</div>
+	</main>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/pixi.min.js"></script>
+	<script src="js/pixi-sound.js"></script>
+	<script src="js/main.js"></script>
+
+	<script>
+		musicIndex();
+	</script>
+</body>
+</html>

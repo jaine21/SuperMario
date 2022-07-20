@@ -1,0 +1,271 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+@font-face {
+    font-family: Mario;
+    src: url('../fontes/SuperMario256.ttf');
+}
+
+/** Boot */
+body, html {
+	padding: 0;
+	margin: 0;
+}
+.d-flex {
+	display: flex;
+}
+.justify-content-center {
+	justify-content: center;
+}
+.justify-content-start {
+	justify-content: start;
+}
+.justify-content-end {
+	justify-content: end;
+}
+.justify-content-between {
+	justify-content: space-between;
+}
+.align-items-center {
+	align-items: center;
+}
+.align-items-start {
+	align-items: flex-start;
+}
+.align-items-end {
+	align-items: flex-end;
+}
+.flex-row {
+	flex-direction: row;
+}
+.flex-column {
+	flex-direction: column;
+}
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+.aqua {
+	color: #00e2f8;
+}
+.crimson {
+	color: #ff312f;
+}
+.lime {
+	color: #00cd00;
+}
+.gold {
+	color: #ffcb00;
+}
+/** End Boot */
+
+main.home {
+	background: url('../imagens/background.jpg'), linear-gradient(to bottom, #ccffff, #fff);
+	background-color: white;
+	background-size: cover;
+	background-position: bottom;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	min-height: 100vh;
+}
+
+/** Title Game */
+.title-game {
+	max-width: 600px;
+	text-align: right;
+	position: relative;
+	animation-name: animate-title-game;
+	animation-duration: 1.5s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite;
+}
+.title-game .title {
+	font-family: Mario;
+	text-align: right;
+	text-shadow: 4px 4px 3px #000;
+}
+.title-game .title p {
+	margin: 5px 15px 5px 0;
+	font-size: 3rem;
+}
+.title-game .copa {
+	max-width: 160px;
+}
+
+@keyframes animate-title-game {
+	from {
+		top: 5px;
+	}
+	to {
+		top: 20px;
+	}
+}
+/** End Title Game */
+
+
+/** Select Level */
+.select-level {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	max-width: 400px;
+	background: linear-gradient(50deg, #00cc00,#008200);
+	padding: 15px;
+	border: 5px solid #fff;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+}
+.select-level .select {
+	width: 100%;
+	color: #00af00;
+	font-family: Mario;
+	font-size: 1.5rem;
+	padding: 12px 8px;
+	border: 0 none;
+	border-radius: 8px;
+	text-align: center;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+.select-level .start {
+	margin: 20px 0 0 0;
+	max-width: 190px;
+	text-align: center;	
+}
+/** End Select level */
+
+
+/** Figures */
+.figures {
+	width: 100%;
+}
+.figures .figure-animation {
+	animation-name: animation-figures;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	position: relative;
+}
+.figures .figure-animation-center {
+	animation-name: animation-figures-center;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	position: relative;
+}
+.figures #figure-1 {
+	top: 30px;
+	animation-duration: 2s;
+	max-width: 300px;
+}
+.figures #figure-2 {
+	top: 20px;
+	animation-duration: 1s;
+}
+.figures #figure-3 {
+	top: 30px;
+	animation-duration: 2s;
+	max-width: 270px;
+}
+
+@keyframes animation-figures {
+	from {
+		top: -50px;
+	}
+	to {
+		top: 80px;
+	}
+}
+@keyframes animation-figures-center {
+	from {
+		top: 20px;
+	}
+	to {
+		top: 40px;
+	}
+}
+/** End Figures */
+
+
+main.game {
+	background: url('../imagens/background-jogo.png'), #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow-y: auto;
+	overflow-x: hidden;
+	min-height: 100vh;
+}
+
+.game .options {
+	width: 140px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 5px;
+	background: rgba(0, 0, 0, 0.8);
+}
+.game .options a {
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.game-stage {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+.table-info {
+	width: 100%;
+	max-width: 200px;
+	background-color: #ced4d6;
+	height: 500px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.table-info .counts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family: 'Mario';
+	font-size: 1.5rem;
+	margin: 25px 0;
+}
+.table-info .counts img {
+	max-width: 100px;
+}
+.table-info #cronometro {
+	background: url('../imagens/cronometro.png') #ced4d6 center center no-repeat;
+	background-size: cover;
+	width: 100%;
+	max-width: 200px;
+	height: 200px;
+	font-family: 'Mario';
+	color: blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.table-info #cronometro #tempo {
+	font-size: 2.5rem;
+	transform: translateY(20px);
+}
+
+.stage {
+	width: 100%;
+	max-width: 980px;
+	background: rgba(0, 0, 0, 0.7);
+	border: 4px solid #d6a036;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
